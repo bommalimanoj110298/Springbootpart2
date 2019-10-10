@@ -1,26 +1,26 @@
 package com.stackroute.domain;
 
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
-public class Movie {
+@Entity(name = "movie")
+
+public class MovieApp {
     @Id
-    int id;
+    String id;
     String title;
     String genre;
-    String yearOfRelease;
     String language;
 
-    public Movie()
-    {
+    public MovieApp() {
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -40,14 +40,6 @@ public class Movie {
         this.genre = genre;
     }
 
-    public String getYearOfRelease() {
-        return yearOfRelease;
-    }
-
-    public void setYearOfRelease(String yearOfRelease) {
-        this.yearOfRelease = yearOfRelease;
-    }
-
     public String getLanguage() {
         return language;
     }
@@ -56,13 +48,13 @@ public class Movie {
         this.language = language;
     }
 
+
     @Override
     public String toString() {
-        return "user{" +
+        return "MovieApp{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", genre='" + genre + '\'' +
-                ", yearOfRelease='" + yearOfRelease + '\'' +
                 ", language='" + language + '\'' +
                 '}';
     }
